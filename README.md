@@ -1,8 +1,11 @@
-# makefile-automation
+Makefile-automation
+===================
+
 Makefile template for automation in projects. Create tasks instead repeating it every time and forget long commands.
 
 
-# Demo
+Demo
+====
 
 ![command-line.jpg](command-line.jpg)
 
@@ -24,7 +27,8 @@ task-five                      Run command inside
 ```
 
 
-# Description of Makefile content
+Description of Makefile content
+===============================
 
 First part
 ```bash
@@ -95,4 +99,12 @@ help:
     @:    # do not change           # this is useful for passing args to make
 
 .DEFAULT_GOAL := help
+```
+
+Bash autocomplete Makefile targets
+==================================
+
+Add this into `~/.bashrc`
+```bash
+complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
 ```
