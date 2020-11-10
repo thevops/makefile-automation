@@ -1,3 +1,4 @@
+# source: https://github.com/vizarch/makefile-automation
 .RECIPEPREFIX +=
 .ONESHELL:
 SHELL:=/bin/bash
