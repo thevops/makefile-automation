@@ -1,5 +1,6 @@
 # source: https://github.com/vizarch/makefile-automation
 .RECIPEPREFIX +=
+# if make > 4.3 then use: .RECIPEPREFIX := $(.RECIPEPREFIX)<space>
 .ONESHELL:
 SHELL:=/bin/bash
 .SHELLFLAGS := -eu -o pipefail -c # exit if error in pipe
