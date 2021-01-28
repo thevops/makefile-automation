@@ -1,0 +1,21 @@
+.ONESHELL:
+SHELL:=/bin/bash
+
+.PHONY: one two three
+
+one: ## Simple task
+	@echo "This is simple task"
+
+two: ## Print bash variable inside
+	@hello="world"
+	@echo $$hello
+
+three: ## Run command inside
+	@get_comment=$$(grep siemka .env)
+	@echo $$get_comment
+
+help:
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\t\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+
+.DEFAULT_GOAL := help
