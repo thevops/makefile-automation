@@ -1,4 +1,4 @@
-# source: https://github.com/vizarch/makefile-automation
+# source: https://github.com/thevops/makefile-automation
 .RECIPEPREFIX +=
 # if make > 4.3 then use: .RECIPEPREFIX := $(.RECIPEPREFIX)<space>
 .ONESHELL:
