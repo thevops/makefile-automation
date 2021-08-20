@@ -1,7 +1,7 @@
 Makefile-automation
 ===================
 
-Makefile template for automation in projects. Create tasks instead repeating it every time and forget long commands.
+Makefile template for automation in projects. Create tasks instead repeating it every time and forget long commands
 
 
 Demo
